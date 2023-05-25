@@ -1,6 +1,6 @@
 import React from "react";
-import { FaInstagram, FaFacebook, FaGoogle } from "react-icons/fa";
-import { FiMail, FiBell } from "react-icons/fi";
+import { FaInstagram, FaGithub, FaLinkedin } from "react-icons/fa";
+import { FiBell } from "react-icons/fi";
 
 const Footer: React.FC = () => {
   return (
@@ -11,16 +11,19 @@ const Footer: React.FC = () => {
             <p className="text-white">Natural Destinations Blog</p>
           </div>
           <div className="text-center sm:text-left mt-4 sm:mt-0">
-            <p className="text-white">Ikuti Kami:</p>
+            <p className="text-white">Follow Us</p>
             <div className="flex justify-center sm:justify-start mt-2">
-              <a href="#" className="text-white mx-2">
-                <FaInstagram />
+              <a
+                href="https://www.instagram.com/chikogina_/?igshid=YmMyMTA2M2Y="
+                className="text-white mx-2"
+              >
+                <FaInstagram size={32} />
               </a>
-              <a href="#" className="text-white mx-2">
-                <FaFacebook />
+              <a href="https://www.linkedin.com/in/ginatobing/" className="text-white mx-2">
+                <FaLinkedin size={32}  />
               </a>
-              <a href="#" className="text-white mx-2">
-                <FaGoogle />
+              <a href="https://github.com/Ginasonia98?tab=repositories" className="text-white mx-2">
+                <FaGithub size={32}  />
               </a>
             </div>
           </div>
