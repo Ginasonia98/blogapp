@@ -1,4 +1,4 @@
-import { takeLatest, put, select } from "redux-saga/effects";
+import { takeLatest, put, select, takeEvery } from "redux-saga/effects";
 import { setPosts, getPostSuccess, getPostFetch } from "./postSlice";
 
 function* fetchPostsSaga(): Generator<any, void, any> {
@@ -156,5 +156,5 @@ function* fetchPostsSaga(): Generator<any, void, any> {
 
 export default function* postSaga(): Generator {
   console.log("masuk generator");
-  yield takeLatest(getPostFetch, fetchPostsSaga);
+  yield takeEvery(getPostFetch, fetchPostsSaga);
 }
