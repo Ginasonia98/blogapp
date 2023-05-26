@@ -32,7 +32,3 @@ export const postSlice = createSlice({
 
 export const { setPosts, getPostFetch, getPostSuccess, getPostFailure } = postSlice.actions;
 export default postSlice.reducer;
-
-
-
-

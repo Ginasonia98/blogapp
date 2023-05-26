@@ -1,5 +1,5 @@
 import { takeLatest, put, select } from 'redux-saga/effects';
-import { setPosts, getPostSuccess } from './postState';
+import { setPosts, getPostSuccess, getPostFetch } from './postSlice';
 
 function* fetchPostsSaga(): Generator<any, void, any> {
   const posts = yield select((state) => state.post.posts);
@@ -17,6 +17,5 @@ function* fetchPostsSaga(): Generator<any, void, any> {
 }
 
 export default function* postSaga(): Generator {
-  yield takeLatest('FETCH_POSTS', fetchPostsSaga);
+  yield takeLatest(getPostFetch.type, fetchPostsSaga);
 }
-

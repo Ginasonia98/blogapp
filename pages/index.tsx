@@ -1,7 +1,7 @@
 import React, { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import Layout from '../components/Layout';
-import { getPostFetch } from '../postState';
+import { getPostFetch } from '../postSlice';
 
 const Home: React.FC = () => {
   const dispatch = useDispatch();
@@ -28,6 +28,3 @@ const Home: React.FC = () => {
 };
 
 export default Home;
-
-
-

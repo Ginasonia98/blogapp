@@ -28,7 +28,7 @@ const Footer: React.FC = () => {
             </div>
           </div>
           <div className="text-center lg:text-center sm:text-right mt-4 sm:mt-0">
-            <p className="text-white text-start">Subscribe:</p>
+            <p className="text-white text-start">Subscribe</p>
             <div className="relative mt-2">
               <input
                 type="text"
