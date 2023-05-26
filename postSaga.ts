@@ -156,5 +156,5 @@ function* fetchPostsSaga(): Generator<any, void, any> {
 
 export default function* postSaga(): Generator {
   console.log("masuk generator");
-  yield takeEvery(getPostFetch, fetchPostsSaga);
+  yield takeEvery("post/getPostFetch", fetchPostsSaga);
 }
