@@ -9,7 +9,9 @@ const Home: React.FC = () => {
 
   useEffect(() => {
     dispatch(getPostFetch());
-  }, [dispatch]);
+  }, []);
+
+  console.log({ posts });
 
   return (
     <Layout>
