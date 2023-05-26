@@ -2,6 +2,7 @@ import { takeLatest, put, select } from "redux-saga/effects";
 import { setPosts, getPostSuccess, getPostFetch } from "./postSlice";
 
 function* fetchPostsSaga(): Generator<any, void, any> {
+  console.log("masuk 123");
   const posts = yield select((state) => state.post.posts);
 
   const newPosts = [
