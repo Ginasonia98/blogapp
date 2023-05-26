@@ -1,12 +1,12 @@
-import React, { useEffect } from 'react';
-import { Provider } from 'react-redux';
-import { configureStore } from '@reduxjs/toolkit';
-import createSagaMiddleware from 'redux-saga';
-import postReducer from '../postSlice';
-import postSaga from '../postSaga';
-import Home from './index';
+import React, { useEffect } from "react";
+import { Provider } from "react-redux";
+import { configureStore } from "@reduxjs/toolkit";
+import createSagaMiddleware from "redux-saga";
+import postReducer from "../postSlice";
+import postSaga from "../postSaga";
+import Home from "./index";
 
-import '@/styles/globals.css';
+import "@/styles/globals.css";
 
 const sagaMiddleware = createSagaMiddleware();
 
@@ -19,7 +19,11 @@ const store = configureStore({
 
 const App: React.FC = () => {
   useEffect(() => {
-    sagaMiddleware.run(postSaga);
+    try {
+      sagaMiddleware.run(postSaga);
+    } catch (error) {
+      console.log({ error });
+    }
   }, []);
 
   return (
