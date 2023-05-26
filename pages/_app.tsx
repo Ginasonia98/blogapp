@@ -19,11 +19,7 @@ const store = configureStore({
 
 const App: React.FC = () => {
   useEffect(() => {
-    try {
-      sagaMiddleware.run(postSaga);
-    } catch (error) {
-      console.log({ error });
-    }
+    sagaMiddleware.run(postSaga);
   }, []);
 
   return (
