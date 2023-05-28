@@ -1,31 +1,26 @@
-import React, { useEffect } from "react";
+import React, { Component, Dispatch, createContext, useReducer } from "react";
 import { Provider } from "react-redux";
-import { configureStore } from "@reduxjs/toolkit";
-import createSagaMiddleware from "redux-saga";
-import postReducer from "../postSlice";
-import postSaga from "../postSaga";
+import type { AppProps } from "next/app";
 import Home from "./index";
-
 import "@/styles/globals.css";
+import store, { StoreType } from "@/contexts/store";
+import action from "@/contexts/action";
 
-const sagaMiddleware = createSagaMiddleware();
-
-const store = configureStore({
-  reducer: {
-    post: postReducer,
-  },
-  middleware: [sagaMiddleware],
+export const ApplicationContext = createContext<{
+  state: StoreType;
+  dispatch: Dispatch<{ type: string; value: any }>;
+}>({
+  state: store,
+  dispatch: () => void 0,
 });
 
-const App: React.FC = () => {
-  useEffect(() => {
-    sagaMiddleware.run(postSaga);
-  }, []);
+const App = ({ Component, pageProps }: AppProps) => {
+  const [state, dispatch] = useReducer(action, store);
 
   return (
-    <Provider store={store}>
-      <Home />
-    </Provider>
+    <ApplicationContext.Provider value={{ state, dispatch }}>
+      <Component {...pageProps} />
+    </ApplicationContext.Provider>
   );
 };
 

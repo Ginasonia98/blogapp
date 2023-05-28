@@ -1,17 +1,18 @@
-import React, { useEffect } from "react";
-import { useDispatch, useSelector } from "react-redux";
+import React, { useContext, useEffect } from "react";
 import Layout from "../components/Layout";
-import { getPostFetch } from "../postSlice";
+import { setPost } from "@/contexts/reducer";
+import { ApplicationContext } from "./_app";
+import { posts } from "@/contexts/data";
 
 const Home: React.FC = () => {
-  const dispatch = useDispatch();
-  const posts = useSelector((state: any) => state.post.posts);
+  const { state, dispatch } = useContext(ApplicationContext);
+  const postList = state.posts;
 
   useEffect(() => {
-    dispatch(getPostFetch());
-  }, []);
+    dispatch(setPost(posts));
+  }, [dispatch]);
 
-  console.log({ posts });
+  console.log({ postList });
 
   return (
     <Layout>
@@ -19,8 +20,8 @@ const Home: React.FC = () => {
         Favourite Natural Destinations
       </h2>
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4">
-        {posts &&
-          posts.map((post: any, index: number) => (
+        {postList &&
+          postList.map((post: any, index: number) => (
             <div
               key={`post-${index}`}
               className="bg-white rounded-lg shadow-md p-4"
