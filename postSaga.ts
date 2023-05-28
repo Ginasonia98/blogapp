@@ -1,8 +1,9 @@
-import { takeLatest, put, select } from "redux-saga/effects";
-import { setPosts, getPostSuccess, getPostFetch } from "./postSlice";
+import { takeLatest, put, select,all } from "redux-saga/effects";
+import {getPostSuccess, getPostFetch ,getPostFailure} from "./postSlice";
 
 function* fetchPostsSaga(): Generator<any, void, any> {
-  const posts = yield select((state) => state.post.posts);
+  try {
+    const posts = yield select((state) => state.post.posts);
 
   const newPosts = [
     {
@@ -145,13 +146,18 @@ function* fetchPostsSaga(): Generator<any, void, any> {
     },
   ];
 
-  const updatedPosts = [...posts, ...newPosts];
-
-  yield put(setPosts(updatedPosts));
-  yield put(getPostSuccess(updatedPosts)); // Dispatch getPostSuccess action to update the posts state
+  yield put(getPostSuccess(newPosts));
+  } catch (error) {
+    // Dispatch the failure action with the error message
+    yield put(getPostFailure);
+  }
 }
 
-export default function* postSaga(): Generator {
-  console.log("masuk generator");
+// Watcher saga
+function* watchFetchPostsSaga() {
   yield takeLatest(getPostFetch.type, fetchPostsSaga);
+}
+
+export default function* postSaga() {
+  yield all([watchFetchPostsSaga()]);
 }
