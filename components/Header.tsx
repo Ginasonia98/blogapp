@@ -2,6 +2,7 @@ import React, { useEffect } from "react";
 import { auth } from "../firebase";
 import { signInWithPopup, GoogleAuthProvider } from "firebase/auth";
 import { useAuthState } from "react-firebase-hooks/auth";
+import Mode from "./ModeButton";
 
 const Header: React.FC = () => {
   const [user, loading] = useAuthState(auth);
@@ -17,15 +18,20 @@ const Header: React.FC = () => {
   return (
     <header className="bg-gray-800 py-4">
       <div className="container mx-auto px-4 flex justify-between items-center flex-col md:flex-row">
-        <h1 className="text-white text-2xl order-first md:order-none mb-4 md:mb-0">
-          Natural Destinations Blog
-        </h1>
         <div className="flex items-center">
+          <h1 className="text-white text-2xl order-first md:order-none mb-4 md:mb-0 md:mr-4">
+            Natural Destinations Blog
+          </h1>
+        </div>
+        <div className="flex items-center">
+          <div className="mr-2 md:mr-4">
+            <Mode />
+          </div>
           {!user ? (
             <>
               <button
                 onClick={login}
-                className="bg-blue-500 hover:bg-blue-600 text-white font-bold py-2 px-4 rounded mr-2"
+                className="bg-blue-500 hover:bg-blue-600 text-white font-bold py-2 px-4 rounded mr-2 md:mr-4"
               >
                 Sign In
               </button>

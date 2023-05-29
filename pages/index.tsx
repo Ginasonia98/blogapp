@@ -16,10 +16,10 @@ const Home: React.FC = () => {
 
   return (
     <Layout>
-      <h2 className="text-3xl text-center mb-4 underline">
+      <h2 className="text-3xl text-center mb-4 underline" >
         Favourite Natural Destinations
       </h2>
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4">
+      <div className=" text-gray-700 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4">
         {postList &&
           postList.map((post: any, index: number) => (
             <div

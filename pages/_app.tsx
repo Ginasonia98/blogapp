@@ -1,5 +1,5 @@
 import React, { Component, Dispatch, createContext, useReducer } from "react";
-import { Provider } from "react-redux";
+import { ThemeProvider } from "next-themes";
 import type { AppProps } from "next/app";
 import Home from "./index";
 import "@/styles/globals.css";
@@ -18,9 +18,11 @@ const App = ({ Component, pageProps }: AppProps) => {
   const [state, dispatch] = useReducer(action, store);
 
   return (
-    <ApplicationContext.Provider value={{ state, dispatch }}>
-      <Component {...pageProps} />
-    </ApplicationContext.Provider>
+    <ThemeProvider enableSystem={true} attribute="class">
+      <ApplicationContext.Provider value={{ state, dispatch }}>
+        <Component {...pageProps} />
+      </ApplicationContext.Provider>
+    </ThemeProvider>
   );
 };
 

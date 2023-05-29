@@ -15,3 +15,7 @@ a {
 * {
   box-sizing: border-box;
 }
+
+.dark-mode body {
+  background-color: #1f2937;
+}
