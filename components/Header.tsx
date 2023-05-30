@@ -24,7 +24,7 @@ const Header: React.FC = () => {
           </h1>
         </div>
         <div className="flex items-center">
-          <div className="mr-2 md:mr-4">
+          <div className="mr-2 md:mr-6">
             <Mode />
           </div>
           {!user ? (
@@ -37,7 +37,7 @@ const Header: React.FC = () => {
               </button>
               <button
                 onClick={() => console.log("Register")}
-                className="bg-blue-500 hover:bg-blue-500 text-white font-bold py-2 px-4 rounded"
+                className="bg-blue-500 hover:bg-blue-500 text-white font-bold py-2 px-4 rounded "
               >
                 Register
               </button>
