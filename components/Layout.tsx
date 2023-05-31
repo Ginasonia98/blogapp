@@ -3,7 +3,7 @@ import Header from './Header';
 import Footer from './Footer';
 import ContactForm from './Contact';
 import Slider from './Slider';
-import SearchBar from './SearchBar';
+// import SearchBar from './SearchBar';
 
 interface LayoutProps {
   children: ReactNode;
@@ -14,9 +14,9 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
     <div>
       <Header />
       <Slider />
-      <div className="flex justify-center mt-8">
+      {/* <div className="flex justify-center mt-8">
         <SearchBar />
-      </div>
+      </div> */}
       <main className="container mx-auto px-4 py-8">{children}</main>
       <ContactForm />
       <Footer />
