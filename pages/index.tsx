@@ -3,11 +3,14 @@ import Layout from "../components/Layout";
 import { setPost } from "@/contexts/reducer";
 import { ApplicationContext } from "./_app";
 import { posts } from "@/contexts/data";
+import Pagination from "../components/Pagination";
+import SearchBar from "../components/SearchBar";
 
 const Home: React.FC = () => {
   const { state, dispatch } = useContext(ApplicationContext);
   const [currentPage, setCurrentPage] = useState(1);
   const [postsPerPage] = useState(4);
+  const [searchKeyword, setSearchKeyword] = useState("");
 
   const postList = state.posts;
 
@@ -15,21 +18,29 @@ const Home: React.FC = () => {
     dispatch(setPost(posts));
   }, [dispatch]);
 
-  console.log({ postList });
+  // Filter posts based on search keyword
+  const filteredPosts = postList.filter((post: any) =>
+    post.title.toLowerCase().includes(searchKeyword.toLowerCase())
+  );
 
   // Get current posts
   const indexOfLastPost = currentPage * postsPerPage;
   const indexOfFirstPost = indexOfLastPost - postsPerPage;
-  const currentPosts = postList.slice(indexOfFirstPost, indexOfLastPost);
+  const currentPosts = filteredPosts.slice(indexOfFirstPost, indexOfLastPost);
 
   // Change page
   const paginate = (pageNumber: number) => setCurrentPage(pageNumber);
+
+  const handleSearch = (keyword: string) => {
+    setSearchKeyword(keyword);
+  };
 
   return (
     <Layout>
       <h2 className="text-3xl text-center mb-4 underline">
         Favourite Natural Destinations
       </h2>
+      <SearchBar onSearch={handleSearch} />
       <div className="text-gray-700 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4">
         {currentPosts &&
           currentPosts.map((post: any, index: number) => (
@@ -52,7 +63,7 @@ const Home: React.FC = () => {
       <div className="flex justify-center mt-4">
         <Pagination
           postsPerPage={postsPerPage}
-          totalPosts={postList.length}
+          totalPosts={filteredPosts.length}
           currentPage={currentPage}
           paginate={paginate}
         />
@@ -61,53 +72,5 @@ const Home: React.FC = () => {
   );
 };
 
-type PaginationProps = {
-  postsPerPage: number;
-  totalPosts: number;
-  currentPage: number;
-  paginate: (pageNumber: number) => void;
-};
-
-const Pagination: React.FC<PaginationProps> = ({
-  postsPerPage,
-  totalPosts,
-  currentPage,
-  paginate,
-}) => {
-  const pageNumbers = Math.ceil(totalPosts / postsPerPage);
-
-  return (
-    <nav>
-      <div className="flex justify-center">
-        <button
-          onClick={() => {
-            if (currentPage > 1) {
-              paginate(currentPage - 1);
-            }
-          }}
-          className={`bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-l focus:outline-none ${
-            currentPage <= 1 ? "opacity-50 cursor-not-allowed" : ""
-          }`}
-        >
-          Prev
-        </button>
-        <div className="mx-4">
-          <button
-            onClick={() => {
-              if (currentPage < pageNumbers) {
-                paginate(currentPage + 1);
-              }
-            }}
-            className={`bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-r focus:outline-none ${
-              currentPage >= pageNumbers ? "opacity-50 cursor-not-allowed" : ""
-            }`}
-          >
-            Next
-          </button>
-        </div>
-      </div>
-    </nav>
-  );
-};
-
 export default Home;
+

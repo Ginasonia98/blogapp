@@ -1,37 +1,59 @@
 import React, { useState } from "react";
 import { FaSearch } from "react-icons/fa";
 
-const SearchBar: React.FC = () => {
-  const [searchTerm, setSearchTerm] = useState("");
+type SearchBarProps = {
+  onSearch: (keyword: string) => void;
+};
 
-  const handleInputChange = (event: React.ChangeEvent<HTMLInputElement>) => {
-    setSearchTerm(event.target.value);
+const SearchBar: React.FC<SearchBarProps> = ({ onSearch }) => {
+  const [searchValue, setSearchValue] = useState("");
+  const [isInputFocused, setIsInputFocused] = useState(false);
+
+  const handleSearch = () => {
+    onSearch(searchValue);
   };
 
-  const handleSubmit = (event: React.FormEvent<HTMLFormElement>) => {
-    event.preventDefault();
-
-    // Reset input setelah pencarian
-    setSearchTerm("");
+  const handleChange = (event: React.ChangeEvent<HTMLInputElement>) => {
+    setSearchValue(event.target.value);
   };
+
+  const handleInputFocus = () => {
+    setIsInputFocused(true);
+  };
+
+  const handleInputBlur = () => {
+    setIsInputFocused(false);
+  };
+
+  const inputBorderColor = isInputFocused ? "border-blue-500" : "border-gray-300";
 
   return (
-    <div className="flex items-center">
-      <form onSubmit={handleSubmit} className="relative flex-grow">
+    <div className="flex justify-center items-center">
+      <div className={`relative ${inputBorderColor}`}>
         <input
           type="text"
-          placeholder="Search"
-          className="bg-gray-200 text-gray-700 rounded-3xl w-full sm:w-auto sm:max-w-md py-2 px-4 focus:outline-none focus:ring-2"
-          style={{ width: "350px" }}
-          value={searchTerm}
-          onChange={handleInputChange}
+          placeholder="Search by title"
+          value={searchValue}
+          onChange={handleChange}
+          onFocus={handleInputFocus}
+          onBlur={handleInputBlur}
+          className="px-4 py-2 pr-8 border rounded-3xl w-full sm:w-auto sm:max-w-md  focus:outline-none"
+          style={{ width: "370px" }}
         />
-        <div className="absolute inset-y-0 right-0 flex items-center pr-3 pointer-events-none">
-          <FaSearch />
-        </div>
-      </form>
+        <FaSearch
+          className="absolute right-2 top-1/2 transform -translate-y-1/2 text-gray-600 cursor-pointer"
+          onClick={handleSearch}
+        />
+      </div>
     </div>
   );
 };
 
 export default SearchBar;
+
+
+
+
+
+
+
