@@ -7,8 +7,10 @@ import Slider from './Slider';
 interface LayoutProps {
   children: ReactNode;
 }
+/**Mendefinisikan interface LayoutProps untuk menggambarkan properti yang diterima oleh komponen Layout. Properti ini harus memiliki tipe ReactNode. */
 
 const Layout: React.FC<LayoutProps> = ({ children }) => {
+  /**Mendefinisikan fungsi komponen Layout sebagai fungsi komponen yang menerima properti dengan tipe LayoutProps. Properti tersebut dinamai children dan digunakan untuk menampung elemen-elemen yang diberikan sebagai isi komponen Layout. */
   return (
     <div>
       <Header />
