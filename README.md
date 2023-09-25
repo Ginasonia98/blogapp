@@ -20,5 +20,3 @@ This is a blog app built using React, TypeScript, and several other technologies
 - Tailwind CSS: A utility-first CSS framework for rapidly building custom user interfaces.
 
 Start the development server: npm run dev
-
-Thankyou for reading
