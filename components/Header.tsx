@@ -15,25 +15,16 @@ const Header: React.FC = () => {
     console.log(user);
   }, [user]);
 
-  const imageStyle = {
-    width: "3rem", 
-    height: "3rem", 
-    objectFit: "contain",
-    filter: "brightness(120%)",
-    borderRadius: "50%", 
-    marginRight: "5px", 
-  };
-
   return (
-    <header className="bg-gray-600 py-4">
+    <header className="bg-gray-800 py-4">
       <div className="container mx-auto px-4 flex justify-between items-center flex-col md:flex-row">
         <div className="flex items-center">
           <img
             src="https://www.beautyofindonesia.com/assets/images/logoHeader.png"
             alt="Logo"
-            style={imageStyle}
+            className="w-12 h-12 md:w-16 md:h-16 object-contain rounded-full mr-4"
           />
-          <h1 className="text-white text-xl mb-4 md:mb-0 md:mr-4">
+          <h1 className="text-white text-2xl mb-4 md:mb-0 md:mr-4">
             Beauty Of Indonesia
           </h1>
         </div>
@@ -45,13 +36,13 @@ const Header: React.FC = () => {
             <>
               <button
                 onClick={login}
-                className="bg-white border border-blue-500  text-blue-500 font-bold py-2 px-4 rounded mr-2 md:mr-4"
+                className="bg-blue-500 hover:bg-blue-600 text-white font-bold py-2 px-4 rounded mr-2 md:mr-4"
               >
                 Sign In
               </button>
               <button
                 onClick={() => console.log("Register")}
-                className="bg-white border border-blue-500  text-blue-500  font-bold py-2 px-4 rounded "
+                className="bg-blue-500 hover:bg-blue-500 text-white font-bold py-2 px-4 rounded "
               >
                 Register
               </button>
@@ -61,7 +52,7 @@ const Header: React.FC = () => {
               <p className="text-white mr-2">Welcome {user.displayName}</p>
               <button
                 onClick={() => auth.signOut()}
-                className="bg-white border border-blue-500  text-blue-500  font-bold py-2 px-4 rounded"
+                className="bg-blue-500 hover:bg-blue-500 text-white font-bold py-2 px-4 rounded"
               >
                 Sign Out
               </button>
@@ -74,6 +65,7 @@ const Header: React.FC = () => {
 };
 
 export default Header;
+
 
 
 
