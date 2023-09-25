@@ -11,7 +11,7 @@ export const posts = [
     description:
       "Bromo Tengger Semeru National Park, East Java: Known for its active volcano, Mount Bromo, and the breathtaking sunrise views. The national park also offers picturesque lakes and vast grasslands.",
     imageUrl:
-      "https://radarsolo.jawapos.com/wp-content/uploads/2021/09/bromo-tengger.jpg",
+      "https://www.dewimagazine.com/img/images/img_20200715211432_5f0f0f485c28b.jpg",
   },
   {
     title: "Lake Toba",
@@ -136,5 +136,117 @@ export const posts = [
       "Lake Maninjau, West Sumatra: Lake Maninjau is a serene crater lake located in the highlands of West Sumatra. Surrounded by rolling hills and picturesque landscapes, it offers a tranquil setting for relaxation and enjoying nature. Visitors can swim in the lake's clear waters, explore traditional villages, and savor the local cuisine.",
     imageUrl:
       "https://picture.triptrus.com/image/2014/06/danau-maninjau-4.jpeg",
+  },
+  {
+    title: "Hajoran Beach",
+    description:
+      "Hajoran Beach, North Sumatra: One of the attractions of Hajoran Beach is the possibility of fishing while enjoying the beautiful sunset. Many visitors come to this beach bringing their fishing equipment. This beach is a favorite destination for anglers, because it has a reputation as a good place to catch fish.",
+    imageUrl:
+      "https://www.pantainesia.com/wp-content/uploads/2018/07/pantai-bolihotuo-760x428.jpg",
+  },
+  {
+    title: "Waesai Waterfall",
+    description:
+      "Waesai Waterfall, South Sulawesi: Waesai is truly an extraordinary spot, a beautiful waterfall, beautified by the rainbow that often appears under the waterfall so you will never get bored of taking pictures.",
+    imageUrl:
+      "https://www.celebes.co/wp-content/uploads/2021/10/Kegiatan-Menarik-di-Wisata-Air-Terjun-Waesai-Barru.jpg",
+  },
+  {
+    title: "Karang Hawu Beach",
+    description:
+      "Karang Hawu Beach, West Java: The characteristic of the beach is that the cliffs jut out into the sea, with the waves crashing against the edge of the cliff making it even more beautiful and charming. Apart from that, the cool air also adds comfort for those of you who visit there.",
+    imageUrl:
+      "https://picture.triptrus.com/image/2014/06/danau-maninjau-4.jpeg",
+  },
+  {
+    title: "Little Lake Habema",
+    description:
+      "Little Lake Habema, Papua: A view that is so beautiful, majestic and very enchanting will greet you when you arrive at Lake Habema. The expanse of grassland around the lake and endemic Papuan plants such as house ants or black orchids will leave you stunned to enjoy the beautiful nature of Papua. If you are lucky, you can also meet various types of typical Papuan birds, such as Cendrawasih or at least enjoy their chirping. The temperature around Lake Habema is certainly cold.",
+    imageUrl:
+      "https://www.celebes.co/papua/wp-content/uploads/2023/06/Fasilitas-Danau-Habema.webp",
+  },
+  {
+    title: "Losari Beach",
+    description:
+      "Losari Beach, South Sulawesi: At this tourist location, visitors can see a number of typical South Sulawesi cultural icons. One of them is the names of the major tribes in South Sulawesi written on each pavilion. These include Bugis, Makassar, Toraja and Mandar.",
+    imageUrl:
+      "https://i.pinimg.com/1200x/59/d5/09/59d5093e261358abc6cf16365473e62e.jpg",
+  },
+  {
+    title: "Lake Anggi",
+    description:
+      "Lake Anggi, Papua: Lake Anggi is indeed difficult to reach, but all that will not matter when we witness for ourselves the amazing natural majesty around the lake. In fact, according to local residents, the awesomeness of Lake Anggi has been recognized by researchers from abroad. There are many researchers who want to examine the depth of the two Anggi Lakes, but no one has been able to dive and reach the bottom of the lake.",
+    imageUrl:
+      "https://beritapapua.id/wp-content/uploads/2020/07/anggi-giji-dan-anggi-gida.jpg",
+  },
+  {
+    title: "Jumog Waterfall",
+    description:
+      "Jumog Waterfall, Central Java: Jumog waterfall is not like the Grojokan Sewu waterfall in Tawangmangu which has a height of 81 meters. Jumog waterfall has a height of around 30 meters, but the beauty of its natural tourist attractions is very enchanting. Jumog waterfall has three branches, namely Klueng, Kusumajati, and Jubleg. This tourist area is equipped with children's play pool facilities and neatly lined food stalls.",
+    imageUrl:
+      "https://asset.kompas.com/crops/rWQfONFtJnJRzIHh4WFUuuDjUrM=/433x0:4801x2912/750x500/data/photo/2021/05/06/6093a8d62f91e.jpg",
+  },
+  {
+    title: "Karapyak Beach",
+    description:
+      "Karapyak Beach, West Java: Karapyak Beach has a tourist attraction in the form of a beautiful stretch of white sand combined with coral rocks along the coastline. The cool atmosphere with calm beach breezes makes tourists feel at home at Karapyak Beach for a long time. Even though tourists cannot swim at this location, tourists can do other activities such as camping and taking selfies.",
+    imageUrl:
+      "https://travelspromo.com/wp-content/uploads/2021/01/Area-sekitar-garis-pantai-karapyak-pangandaran-1024x768.jpg",
+  },
+  {
+    title: "Kedung Kayang Waterfall",
+    description:
+      "Kedung Kayang waterfall, Central Java: The panorama of the main waterfall is so amazing. The rushing stream looked like a giant white curtain. The surrounding view in a large alcove is no less charming. During the rainy season, there is also a small waterfall that adorns the view.",
+    imageUrl:
+      "https://images.solopos.com/2021/07/Panorama-Air-Terjun-Kedung-Kayang-dengan-latar-Gunung-Merapi-dan-Gunung-Merbabu.jpg",
+  },
+  {
+    title: "Mandel Beach",
+    description:
+      "Mandel Beach, Central Sulawesi: Mandel Beach offers stretches of white sand and blue sea water which makes it very beautiful. You can also see trees and green hills that can spoil the eyes.",
+    imageUrl:
+      "https://www.beautyofindonesia.com/uploads/foto_wisata/PANTAI-MANDEL-KABUPATEN-BANGGAI-KEPULAUAN.jpg",
+  },
+    {
+    title: "Parangtritis Beach",
+    description:
+      "Parangtritis Beach,Central Java: The charm of Parangtritis Beach cannot be separated from the history, legends and myths of the Queen of South Beach which is very famous in Indonesia. This started from a mythical story about a kingdom that was said to exist in the sea around the coast. Nyi Roro Kidul itself has a long history of Yogyakarta and the Mataram Kingdom.",
+    imageUrl:
+      "https://www.beautyofindonesia.com/uploads/foto_wisata/PANTAI-PARANGTRITIS-KOTA-YOGYAKARTA.jpg",
+  },
+    {
+    title: "Idenberg Lake",
+    description:
+      "Idenberg Lake,Papua : Tourists will also be pampered with cliffs covered in eternal snow. These cliffs surround Lake Idenberg as if they are fortifying the lake.",
+    imageUrl:
+      "https://wisato.id/wp-content/uploads/2020/05/Danau-Idenberg.jpg",
+  },  {
+    title: "Blue Lake",
+    description:
+      "Blue Lake, West Nusa Tenggara : One of Kolaka's favorite tourist attractions is Lake Biru, a tourist attraction that provides enchanting beauty. As the name suggests, this lake does have blue and clear water. This blue lake is surrounded by a natural ecosystem, which is still cool and beautiful. The blue color of the water combined with the green color due to reflections from the trees, can be your best Instagrammable spot.",
+    imageUrl:
+      "https://www.ntbprov.go.id/storage/b_program/Fs1SmejoPs0Ta4Nkaeqd85rPulZ2Z07p8B8cISzu.jpeg",
+  },
+
+    {
+    title: "Batur Lake",
+    description:
+      "Batur Lake, Bali : Lake Batur Bali has a water surface area of 16.05 km2 and an average depth of 50.8 meters and is surrounded by stunning natural landscapes. Lake Batur Bali is known as the largest lake on the island of Bali.",
+    imageUrl:
+      "https://ik.imagekit.io/tvlk/blog/2021/08/Destinasi-Wisata-di-Kintamani-Pura-Ulun-Danu-Batur-Shutterstock.jpg?tr=dpr-2,w-675",
+  },  
+  {
+    title: "Balekambang Beach",
+    description:
+      "Balekambang Beach, East Java: Apart from being a natural tourist attraction, Balekambang Beach can also be called a religious tourist spot. Because on certain days, thousands of visitors come to this beach to perform rituals. ",
+    imageUrl:
+      "https://cdn.idntimes.com/content-images/post/20210607/balekambangmalang-1623069591230556-4007c4d86a370b98c4829f41c284c486_600x400.jpg",
+  },
+  {
+    title: "Ayamaru Lake",
+    description:
+      "Ayamaru Lake, Papua: Lake Ayamaru is surrounded by Karst which is still very natural, making the view of this lake even more beautiful. This lake is very interesting, as a fishery resource, this lake is rich in various types of fish. There are many activities you can do when visiting Lake Ayamaru, including swimming, going around the lake by boat, watching fishermen catch fish with spears, and hunting for photography objects.",
+    imageUrl:
+      "https://assets-a1.kompasiana.com/statics/files/14146653562050363388.jpg?t=o&v=770",
   },
 ];

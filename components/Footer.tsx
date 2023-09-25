@@ -4,11 +4,11 @@ import { FiBell } from "react-icons/fi";
 
 const Footer: React.FC = () => {
   return (
-    <footer className="bg-gray-800 py-4 bottom-0 left-0 w-full z-10">
+    <footer className="bg-gray-600 py-4 bottom-0 left-0 w-full z-10">
       <div className="container mx-auto px-4">
         <div className="flex flex-col sm:flex-row justify-between items-center">
           <div className="text-center sm:text-left">
-            <p className="text-white">Natural Destinations Blog</p>
+            <h1 className="text-white text-xl">Beauty Of Indonesia</h1>
           </div>
           <div className="text-center sm:text-left mt-4 sm:mt-0">
             <p className="text-white">Follow Us</p>
